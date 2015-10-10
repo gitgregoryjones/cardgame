@@ -12,31 +12,40 @@ var PLAYERS = 4;
 var suites = ["spades","diamonds","hearts","clubs"];
 var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
-var DECK = {}
-
-
 function Deck(suites, cards){
-	this.rdeck = [];
-	suites.forEach(function(suite){
-		cards.forEach(function(card){
-			console.log("Building "+suite + " : " + card );
-			this.rdeck.push(new Card(suite,card))
+	var rdeck = [];
+	console.log(this.rdeck)
+	
+		suites.forEach(function(suite){
+			cards.forEach(function(card){
+				console.log("Building "+suite + " : " + card );
+
+				rdeck.push(new Card(suite,card))
+				console.log(rdeck)
+			})
 		})
-	})
+
+		
+	
 
 	this.shuffle = function(){
 		var i = 0, j = 0, temp = null;
-		for (i = array.length - 1; i > 0; i -= 1) {
+		for (i = rdeck.length - 1; i > 0; i -= 1) {
 		    j = Math.floor(Math.random() * (i + 1))
-		    temp = array[i]
-		    array[i] = array[j]
-		    array[j] = temp
+		    temp = rdeck[i]
+		    rdeck[i] = rdeck[j]
+		    rdeck[j] = temp
 		}
+		
 	}
 
 	this.nextCard = function(){
-		return this.rdeck.pop();
+		return rdeck.pop();
 	}
+
+	
+	this.shuffle()
+
 
 	return this;
 }
