@@ -41,11 +41,9 @@ function shuffle (array) {
   }
 }
 
-function deal(gameName){
-	console.log("Getting deck");
-	gameName = new Deck(suites,cards);
-	shuffle(gameName);
-	return gameName;
+function dealCard(gameName){
+	
+	return gameName.pop();
 }
 
 function Card(suite,number){
