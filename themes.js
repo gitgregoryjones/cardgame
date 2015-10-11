@@ -11,6 +11,9 @@ function setThemeName(){
 		if($(objs[i]).css('visibility') == "visible"){
 			console.log("Setting Theme " + $(objs[i]).attr('data-label'));
 			$axure.setGlobalVariable("Theme",$(objs[i]).attr('data-label'))
+
+			//Start playing the theme song if theme found
+			youWon($axure.getGlobalVariable($(objs[i]).attr('data-label')));
 		}
 	}
 
