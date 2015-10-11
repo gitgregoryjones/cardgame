@@ -11,6 +11,8 @@ function Theme(won,sounds,image){
 }
 
 function playThemeSound(theme,index){
+
+	console.log("Loading sound theme " + theme + " and sound at index " + index); 
 	
 	sound = themes[theme].sounds[index];
 
