@@ -22,3 +22,10 @@ function renderNextCard(){
 	console.log($axure.getGlobalVariable("CurrentCardSuite"));
 
 }
+
+ 
+for ( var i in window) {
+	if((typeof window[i]).toString()=="function"){
+    console.log("Successfully Loaded function :" + window[i].name);
+    }
+}
