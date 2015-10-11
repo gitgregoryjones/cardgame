@@ -43,6 +43,8 @@ function youWon(themeName){
 
 	//Do some image stuff
 	image = themes[themeName].image
+
+	return image;
 }
 
 function playYouWonSound(themeName){
