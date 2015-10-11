@@ -24,7 +24,7 @@ function playSound(sound){
 	}
 
 	audio = new Audio(sound);
-	audio.play();
+	audio.pause();
 
 	console.log("playing sound " + sound);
 
