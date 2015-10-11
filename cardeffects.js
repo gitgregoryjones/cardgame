@@ -19,12 +19,12 @@ function playSound(sound){
 
 	console.log("Attempting to play sound " + sound);
 
-	if(audio != null){
+	if(audio){
 		audio.pause();
 	}
 
 	audio = new Audio(sound);
-	audio.pause();
+	audio.play();
 
 	console.log("playing sound " + sound);
 
