@@ -2,7 +2,7 @@ var themes = {
 	
 }
 
-var function Theme(won,sounds,image){
+function Theme(won,sounds,image){
 	this.won = won;
 	this.sounds = sounds;
 	this.image = image;
