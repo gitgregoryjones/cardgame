@@ -5,8 +5,10 @@ function colorCardText(cardSuite)
 	if(cardSuite.indexOf("hearts") > -1 || cardSuite.indexOf("diamonds") > -1 ){
 
 		$('#cache1').css('color','red');
+		$('#cache3').css('color','red');
 	} else {
 		$('#cache1').css('color','black')
+		$('#cache3').css('color','black')
 	}
 
 }
@@ -18,8 +20,13 @@ function renderNextCard(){
 	card = currentDeck.nextCard();
 	$axure.setGlobalVariable("CurrentCardNumber",card.toString());
 	$axure.setGlobalVariable("CurrentCardSuite","https://rawgit.com/geegit/cardgame/master/"+card.suite + "_suite.png");
+	
 	$('[data-label="BigSuiteBottom"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
 	$('[data-label="BigSuiteTop"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
+
+	$('[data-label="Suite_AnimationBottom"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
+	$('[data-label="Suite_AnimationTop"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
+
 	colorCardText($axure.getGlobalVariable("CurrentCardSuite"));
 	console.log($axure.getGlobalVariable("CurrentCardSuite"));
 
