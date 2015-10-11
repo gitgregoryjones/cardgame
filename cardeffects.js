@@ -20,7 +20,7 @@ function playSound(sound){
 	console.log("Attempting to play sound " + sound);
 
 	if(audio != null){
-		audio.stop();
+		audio.pause();
 	}
 
 	audio = new Audio(sound);
