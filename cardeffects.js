@@ -10,3 +10,15 @@ function colorCardText(cardSuite)
 	}
 
 }
+
+//Current Card Deck is defined in carddeck.js
+//$axure is axure var
+function renderNextCard(){
+
+	card = currentDeck.nextCard();
+	$axure.setGlobalVariable("CurrentCardNumber",card.toString());
+	$axure.setGlobalVariable("CurrentCardSuite","https://rawgit.com/geegit/cardgame/master/"+card.suite + "_suite.png");
+	colorCardText($axure.getGlobalVariable("CurrentCardSuite"));
+	console.log($axure.getGlobalVariable("CurrentCardSuite"));
+
+}
