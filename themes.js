@@ -4,6 +4,8 @@ var themes = {
 
 function setThemeName(){
 
+	objs = $('[data-label="Theme"] div.panel_state')
+
 	for(i=0; i < objs.length; i++){
 		console.log($(objs[i]).css('visibility'));
 		if($(objs[i]).css('visibility') == "visible"){
