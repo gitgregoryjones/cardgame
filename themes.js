@@ -20,8 +20,18 @@ function playThemeSound(theme,index){
 
 }
 
-function youWon(theme){
+function youWon(themeName){
+
+	playYouWonSound(themeName);
+
+	//Do some image stuff
+	image = themes[themeName].image
+}
+
+function playYouWonSound(themeName){
 	
-	sound = themes[theme].won;
-	image = themes[theme].image
+	sound = themes[themeName].won;
+	
+	playSound(sound);
+
 }
