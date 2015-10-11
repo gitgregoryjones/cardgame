@@ -1,3 +1,5 @@
+var audio = null;
+
 function colorCardText(cardSuite)
 {
 	console.log("colorCardText: Argument " + cardSuite)
@@ -10,6 +12,21 @@ function colorCardText(cardSuite)
 		$('[data-label="PlayerCard"] span').css('color','black');
 		$('[data-label="RenderCard"] span').css('color','black')
 	}
+
+}
+
+function playSound(sound){
+
+	console.log("Attempting to play sound " + sound);
+
+	if(audio != null){
+		audio.stop();
+	}
+
+	audio = new Audio(sound);
+	audio.play();
+
+	console.log("playing sound " + sound);
 
 }
 
