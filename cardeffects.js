@@ -2,7 +2,7 @@ function colorCardText(cardSuite)
 {
 	console.log("colorCardText: Argument " + cardSuite)
 
-	if(cardSuite == "hearts"){
+	if(cardSuite.indexOf("hearts") > -1 || cardSuite.indexOf("diamonds") > -1 ){
 
 		$('cache1').css('color','red');
 	} else {
