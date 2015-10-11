@@ -13,7 +13,7 @@ function setThemeName(){
 			$axure.setGlobalVariable("Theme",$(objs[i]).attr('data-label'))
 
 			//Start playing the theme song if theme found
-			youWon($axure.getGlobalVariable($(objs[i]).attr('data-label')));
+			youWon($axure.getGlobalVariable("Theme"));
 		}
 	}
 
