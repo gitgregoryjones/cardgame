@@ -18,6 +18,8 @@ function renderNextCard(){
 	card = currentDeck.nextCard();
 	$axure.setGlobalVariable("CurrentCardNumber",card.toString());
 	$axure.setGlobalVariable("CurrentCardSuite","https://rawgit.com/geegit/cardgame/master/"+card.suite + "_suite.png");
+	$('[data-label="BigSuiteBottom"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
+	$('[data-label="BigSuiteTop"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
 	colorCardText($axure.getGlobalVariable("CurrentCardSuite"));
 	console.log($axure.getGlobalVariable("CurrentCardSuite"));
 
