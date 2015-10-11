@@ -58,18 +58,18 @@ function Card(suite,number){
 	this.altLabel = number;
 	if(this.number > 10){
 		if(number == 11){
-			this.altLabel = "Jack";
+			this.altLabel = "J";
 		}else if(number == 12){
-			this.altLabel = "Queen";
+			this.altLabel = "Q";
 		} else if(number == 13){
-			this.altLabel = "King";
+			this.altLabel = "K";
 		} else if(number == 14){
-			this.altLabel = "Ace"
+			this.altLabel = "A"
 		}
 	}
 	this.toString = function(){
 
-		return this.altLabel + " of " + suite;
+		return this.altLabel;
 	}
 
 	console.log(this.toString())
