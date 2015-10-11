@@ -12,7 +12,7 @@ var PLAYERS = 4;
 var suites = ["spades","diamonds","hearts","clubs"];
 var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
-var currentDeck = {};
+
 
 function Deck(){
 	var rdeck = [];
@@ -48,8 +48,6 @@ function Deck(){
 	
 	this.shuffle()
 
-	currentDeck = this;
-
 	return this;
 }
 
@@ -77,3 +75,5 @@ function Card(suite,number){
 	console.log(this.toString())
 	return this;
 }
+
+var currentDeck = new Deck();
