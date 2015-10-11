@@ -27,6 +27,10 @@ function renderNextCard(){
 	$('[data-label="Suite_AnimationBottom"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
 	$('[data-label="Suite_AnimationTop"] img').attr('src',$axure.getGlobalVariable("CurrentCardSuite"))
 
+	$('[data-label="PlayerCard"] span').text($axure.getGlobalVariable("CurrentCardNumber"))
+
+	$('[data-label="RenderCard"] span').text($axure.getGlobalVariable("CurrentCardNumber"))
+
 	colorCardText($axure.getGlobalVariable("CurrentCardSuite"));
 	console.log($axure.getGlobalVariable("CurrentCardSuite"));
 
