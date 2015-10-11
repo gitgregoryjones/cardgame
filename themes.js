@@ -2,6 +2,18 @@ var themes = {
 	
 }
 
+function setThemeName(){
+
+	for(i=0; i < objs.length; i++){
+		console.log($(objs[i]).css('visibility'));
+		if($(objs[i]).css('visibility') == "visible"){
+			console.log("Setting Theme " + $(objs[i]).attr('data-label'));
+			$axure.setGlobalVariable("Theme",$(objs[i]).attr('data-label'))
+		}
+	}
+
+}
+
 function Theme(won,sounds,image){
 	this.won = won;
 	this.sounds = sounds;
