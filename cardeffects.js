@@ -22,7 +22,10 @@ function moveHiddenCard(){
 	y = 440 - Math.floor((Math.random() * 10) + 1);
 
 
-	$('[data-label="DynamicHiddenCard"]').show().animate({
+
+	$babycard = $('[data-label="DynamicHiddenCard"]').clone(true).appendTo('body').css('visibility','visible').css('display','block');
+	
+	$babycard.animate({
 	    opacity:100,
 	    top: y,
 	    left:x
