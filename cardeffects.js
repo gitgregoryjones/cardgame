@@ -34,10 +34,12 @@ function moveHiddenCard(){
 	    $babycard.find('[data-label="RenderCard"]').attr('data-label','dealt-card');
 	    $babycard.find('[data-label="Suite_AnimationBottom"]').attr('data-label','dealt-card-suite-bottom');
 	    $babycard.find('[data-label="Suite_AnimationTop"]').attr('data-label','dealt-card-suite-top')
+	    //Pick Next Card From Hand
+		renderNextCard();
+		console.log("Rendered Next Card after move of hidden card");
 	  });
 
-	//Pick Next Card From Hand
-	renderNextCard();
+	
 }
 
 function playSound(sound){
