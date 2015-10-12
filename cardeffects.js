@@ -81,7 +81,7 @@ function renderNextCard(){
 	console.log($axure.getGlobalVariable("CurrentCardSuite"));
 
 	//Play A random Sound from Theme on each click of the player's hand
-	index = Math.floor((Math.random() * 2));
+	index = Math.floor((Math.random() * 2) +1);
 	console.log("Playing sound number index " + index);
 	playThemeSound($axure.getGlobalVariable("Theme"),index);
 
