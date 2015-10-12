@@ -31,7 +31,7 @@ function moveHiddenCard(){
 	    left:x
 	    
 	  }, 5000, function() {
-	    // Animation complete.
+	    $(babycard).attr('data-label','Copy'+x+y)
 	  });
 }
 
