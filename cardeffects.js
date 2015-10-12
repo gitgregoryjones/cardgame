@@ -23,7 +23,7 @@ function moveHiddenCard(){
 
 
 
-	$babycard = $('[data-label="DynamicHiddenCard"]').clone(true).attr('data-label','copy').attr('id','random').appendTo('body').css('visibility','visible').css('display','block');
+	$babycard = $('[data-label="DynamicHiddenCard"]').clone(true).attr('data-label','copy').appendTo('body').css('visibility','visible').css('display','block');
 	
 	$babycard.animate({
 	    opacity:100,
@@ -31,7 +31,7 @@ function moveHiddenCard(){
 	    left:x
 	    
 	  }, 5000, function() {
-	    $babycard.find('[data-label="DynamicHiddenCard"]').attr('data-label','dealt-card')
+	    $babycard.find('[data-label="RenderCard"]').attr('data-label','dealt-card')
 	  });
 }
 
