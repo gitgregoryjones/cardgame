@@ -30,7 +30,7 @@ function moveHiddenCard(){
 	    top: y,
 	    left:x
 	    
-	  }, 5000, function() {
+	  }, 1500, function() {
 	    $babycard.find('[data-label="RenderCard"]').attr('data-label','dealt-card')
 	  });
 
