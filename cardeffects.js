@@ -17,9 +17,9 @@ function colorCardText(cardSuite)
 
 function moveHiddenCard(){
 
-	x = 120 - Math.floor((Math.random() * 50) + 1);
+	x = 120 - Math.floor((Math.random() * 20) + 1);
 
-	y = 440 - Math.floor((Math.random() * 80) + 1);
+	y = 440 - Math.floor((Math.random() * 20) + 1);
 
 
 
