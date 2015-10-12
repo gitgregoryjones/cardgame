@@ -33,6 +33,9 @@ function moveHiddenCard(){
 	  }, 5000, function() {
 	    $babycard.find('[data-label="RenderCard"]').attr('data-label','dealt-card')
 	  });
+
+	//Pick Next Card From Hand
+	renderNextCard();
 }
 
 function playSound(sound){
@@ -55,6 +58,7 @@ function playSound(sound){
 function renderNextCard(){
 
 	card = currentDeck.nextCard();
+
 	$axure.setGlobalVariable("CurrentCardNumber",card.toString());
 	$axure.setGlobalVariable("CurrentCardSuite","https://rawgit.com/geegit/cardgame/master/"+card.suite + "_suite.png");
 	
