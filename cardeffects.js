@@ -77,7 +77,13 @@ function renderNextCard(){
 	$('[data-label="RenderCard"] span').text($axure.getGlobalVariable("CurrentCardNumber"))
 
 	colorCardText($axure.getGlobalVariable("CurrentCardSuite"));
+
 	console.log($axure.getGlobalVariable("CurrentCardSuite"));
+
+	//Play A random Sound from Theme on each click of the player's hand
+	index = Math.floor((Math.random() * 2));
+	console.log("Playing sound number index " + index);
+	playThemeSound($axure.getGlobalVariable("Theme"),index);
 
 }
  
