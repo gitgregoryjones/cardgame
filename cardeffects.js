@@ -31,7 +31,9 @@ function moveHiddenCard(){
 	    left:x
 	    
 	  }, 1500, function() {
-	    $babycard.find('[data-label="RenderCard"]').attr('data-label','dealt-card')
+	    $babycard.find('[data-label="RenderCard"]').attr('data-label','dealt-card');
+	    $babycard.find('[data-label="Suite_AnimationBottom"]').attr('data-label','dealt-card-suite-bottom');
+	    $babycard.find('[data-label="Suite_AnimationTop"]').attr('data-label','dealt-card-suite-top')
 	  });
 
 	//Pick Next Card From Hand
