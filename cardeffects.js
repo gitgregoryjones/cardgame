@@ -15,15 +15,7 @@ function colorCardText(cardSuite)
 
 }
 
-function setUpPlayArea(){
 
-	theme = $axure.getGlobalVariable("Theme");
-
-	console.log("setUpPlayArea: Theme is loaded as " + theme);
-
-	$('[data-label="TableTopImage"] img').attr('src',themes[theme].image)
-	
-}
 
 function playSound(sound){
 

@@ -27,6 +27,18 @@ function Theme(won,sounds,image){
 	return this;
 }
 
+function setUpPlayArea(){
+
+	theme = $axure.getGlobalVariable("Theme");
+
+	console.log("setUpPlayArea: Theme is loaded as " + theme);
+
+	$('[data-label="TableTopImage"] img').attr('src',themes[theme].image)
+
+	playYouWonSound(theme);
+	
+}
+
 function playThemeSound(theme,index){
 
 	console.log("Loading sound theme " + theme + " and sound at index " + index); 
