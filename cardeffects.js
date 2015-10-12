@@ -21,10 +21,8 @@ function setUpPlayArea(){
 
 	console.log("setUpPlayArea: Theme is loaded as " + theme);
 
-	console.log($('[data-label="BackgroundImage"] img'));
-
-	$('[data-label="BackgroundImage"] img').attr('src',themes[theme].image)
-	$('[data-label="TopCardImage"] img').attr('src',themes[theme].image)
+	$('[data-label="TableTopImage"] img').attr('src',themes[theme].image)
+	
 }
 
 function playSound(sound){
