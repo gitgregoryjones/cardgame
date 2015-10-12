@@ -27,6 +27,8 @@ function Theme(won,sounds,image){
 	return this;
 }
 
+
+
 function setUpPlayArea(){
 
 	theme = $axure.getGlobalVariable("Theme");
