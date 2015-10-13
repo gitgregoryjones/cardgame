@@ -1,4 +1,6 @@
 window.slide = "right";
+$('[data-label="ReturningUser"]').css('color','pink');
+$('[data-label="f_input_id"] input').prop('disabled','true') 
 
 function toggleSwitch(){
 
@@ -11,11 +13,11 @@ function toggleSwitch(){
           
 
           if(window.slide == "right"){
-          	$('[data-label="ReturningUser"]').prop('disabled','false');
-          	$('[data-label="f_input_id"]').prop('disabled','false');   
+          	$('[data-label="ReturningUser"]').css('color','black');
+          	$('[data-label="f_input_id"] input').prop('disabled','false')   
           }else {
-			$('[data-label="ReturningUser"]').prop('disabled','true');
-			$('[data-label="f_input_id"]').prop('disabled','true'); 
+			$('[data-label="ReturningUser"]').css('color','pink');
+			$('[data-label="f_input_id"] input').prop('disabled','true') 
           }
 
 
