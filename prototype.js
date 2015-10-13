@@ -5,7 +5,7 @@ $('[data-label="GreenCircle"]').hide()
 $('[data-label="thumbsup"]').hide() 
 $('[data-label="TopShow_0"]').hide()
 $('[data-label="bannertext"]').hide()
-//$('.ax_paragraph .text').css('width','130px').attr('id','word-wrap-override');
+$('.ax_paragraph .text').css('width','130px').attr('id','word-wrap-override');
 
 
 function getPlaylist(){
@@ -25,11 +25,21 @@ function getPlaylist(){
 		type = $('[data-label="type"]').find('span')[i];
 		originalAirDate = $('[data-label="original_air_date"]').find('span')[i];
 		publishDate = $('[data-label="publish_date"]').find('span')[i];
+		original_air_date = $('[data-label="original_air_date"]').find('span')[i];
 
 
 		//reformat all publish dates on page to MM/DD/YYYY
 		
-		$(publishDate).text('Publish Date:' + moment($(publishDate).text(),'Publish Date: MM/DD/YYYY HH:MM A').format('MM/DD/YYYY'))
+		console.log(publishDate);
+		fdate = moment($($('[data-label="publish_date"]').find('span')[i]).text(),'Publish Date: MM/DD/YYYY HH:MM A').format('MM/DD/YYYY');
+		$($('[data-label="publish_date"]').find('span')[i]).text(fdate)
+		console.log("New Date is " + $($('[data-label="publish_date"]').find('span')[i]).text());
+		
+
+		console.log(original_air_date);
+		fdate = moment($($('[data-label="original_air_date"]').find('span')[i]).text(),'Original Air Date: MMM/DD/YYYY HH:MM A').format('MM/DD/YYYY');
+		$($('[data-label="original_air_date"]').find('span')[i]).text(fdate)
+		console.log("New Date is " + $($('[data-label="original_air_date"]').find('span')[i]).text());
 		
 
 
