@@ -18,11 +18,23 @@ function getPlaylist(){
 		label = $('[data-label="playlist_label"]').find('span')[i];
 		bannertext = $('[data-label="bannertext"]').find('span')[i];
 
+		//Text Fields
+		property = $('[data-label="property_name"]').find('span')[i];
+		asset = $('[data-label="asset_name"]').find('span')[i];
+		type = $('[data-label="type"]').find('span')[i];
+		originalAirDate = $('[data-label="original_air_date"]').find('span')[i];
+		publishDate = $('[data-label="publish_date"]').find('span')[i];
+
 
 		if(img){
 			$(img).attr('src',video.thumbnailurl);
 			$(label).text(i+1);
 
+			$(property).text(video.seriesname);
+			$(asset).text(video.title);
+			$(type).text("Type: " + video.authtype + "/" + video.type);
+			$(originalAirDate).text("Original Air Date: " + video.originalpremieredate);
+			$(publishDate).text("Publish Date: " + video.pubdate);
 		}
 
 		if(video.bannertext){
@@ -46,6 +58,8 @@ function loadShows(){
 
 	showImages = $('[data-label="TopShow_0"] img');
 
+	liked = 0;
+
 	for(i=0; i < shows.length;i++){
 		if($(showImages)[i]) {
 			$(showImages)[i].src = shows[i].characterhead;
@@ -53,12 +67,16 @@ function loadShows(){
 			if(shows[i].usersticky == true){
 				$($('[data-label="thumbsup"]')[i]).show();
 				$($('[data-label="GreenCircle"]')[i]).show();
-				
+				liked += 1;
 			} else {
+				
 				$($('[data-label="TopShow_0"]')[i]).css('opacity','.25');
 			}
 		}
 	}
+
+	//Set #of Liked Shows Counter
+	$('[data-label="num_liked_shows"]').find('span').text(liked)
 }
   
 
