@@ -5,7 +5,7 @@ $('[data-label="GreenCircle"]').hide()
 $('[data-label="thumbsup"]').hide() 
 $('[data-label="TopShow_0"]').hide()
 $('[data-label="bannertext"]').hide()
-$('.ax_paragraph .text').css('width','130px').attr('id','word-wrap-override');
+//$('.ax_paragraph .text').css('width','130px').attr('id','word-wrap-override');
 
 
 function getPlaylist(){
