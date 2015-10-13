@@ -30,18 +30,7 @@ function getPlaylist(){
 
 		//reformat all publish dates on page to MM/DD/YYYY
 		
-		console.log(publishDate);
-		fdate = moment($($('[data-label="publish_date"]').find('span')[i]).text(),'Publish Date: MM/DD/YYYY HH:MM A').format('MM/DD/YYYY');
-		$($('[data-label="publish_date"]').find('span')[i]).text(fdate)
-		console.log("New Date is " + $($('[data-label="publish_date"]').find('span')[i]).text());
 		
-
-		console.log(original_air_date);
-		fdate = moment($($('[data-label="original_air_date"]').find('span')[i]).text(),'Original Air Date: MMM/DD/YYYY HH:MM A').format('MM/DD/YYYY');
-		$($('[data-label="original_air_date"]').find('span')[i]).text(fdate)
-		console.log("New Date is " + $($('[data-label="original_air_date"]').find('span')[i]).text());
-		
-
 
 		if(img){
 			$(img).attr('src',video.thumbnailurl);
@@ -50,8 +39,13 @@ function getPlaylist(){
 			$(property).text(video.seriesname);
 			$(asset).text(video.title);
 			$(type).text("Type: " + video.authtype + "/" + video.type);
-			$(originalAirDate).text("Original Air Date: " + video.originalpremieredate);
-			$(publishDate).text("Publish Date: " + video.pubdate);
+			$(originalAirDate).text("Original Air Date: " + moment(video.originalpremieredate,'MMM/DD/YYYY HH:MM A').format('MM/DD/YYYY'));
+			$(publishDate).text("Publish Date: " +  moment(video.pubdate,'MM/DD/YYYY HH:MM A').format('MM/DD/YYYY'));
+
+			//Process Dates
+		
+		
+
 		}
 
 		if(video.bannertext){
@@ -74,6 +68,8 @@ function getPlaylist(){
 			$($(boundingbox)[i]).css('background-color','#FF4038');
 			$($(boundingbox)[i]).find('img').remove();
 		}
+
+
 
 	}
 
