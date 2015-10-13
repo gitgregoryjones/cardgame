@@ -53,8 +53,9 @@ function loadShows(){
 			if(shows[i].usersticky == true){
 				$($('[data-label="thumbsup"]')[i]).show();
 				$($('[data-label="GreenCircle"]')[i]).show();
+				
 			} else {
-				$($('[data-label="TopShow_0"]')).css('opacity','.25');
+				$($('[data-label="TopShow_0"]')[i]).css('opacity','.25');
 			}
 		}
 	}
