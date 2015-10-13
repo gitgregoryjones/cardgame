@@ -42,6 +42,22 @@ function getPlaylist(){
 			$($('[data-label="bannertext"]')[i]).show();
 		}
 
+		//color code boxes
+		boundingbox = $('[data-label="playlist_label"]');
+		
+		if(video.preference.indexOf("editorial") > -1){
+			$($(boundingbox)[i]).css('background-color','#3E8AE5');
+			$($(boundingbox)[i]).find('img').remove();
+
+		} else if(video.preference.indexOf("like") > -1){
+			$($(boundingbox)[i]).css('background-color','#46DC1F');
+			$($(boundingbox)[i]).find('img').remove();
+		} else {
+			//Neutral. paint red
+			$($(boundingbox)[i]).css('background-color','#FF4038');
+			$($(boundingbox)[i]).find('img').remove();
+		}
+
 	}
 
 	
