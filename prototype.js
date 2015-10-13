@@ -91,6 +91,8 @@ function loadShows(){
 		}
 	}
 
+     $('[data-label="TopShow_0"]').css('border','1px solid green').css('border-radius','50%').css('overflow','hidden').css('width','60px').css('height','60px');
+
 	//Set #of Liked Shows Counter
 	$('[data-label="num_liked_shows"]').find('span').text(liked)
 }
