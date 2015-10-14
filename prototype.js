@@ -39,7 +39,7 @@ function getPlaylist(){
 			$(property).text(video.seriesname);
 			$(asset).text(video.title);
 			$(type).text("Type: " + video.authtype + "/" + video.type);
-			$(originalAirDate).text("Original Air Date: " + moment(video.originalpremieredate,'MMM D, YYYY').format('MM/DD/YYYY'));
+			$(originalAirDate).text("Orig Air Date: " + moment(video.originalpremieredate,'MMM D, YYYY').format('MM/DD/YYYY'));
 			$(publishDate).text("Publish Date: " +  moment(video.pubdate,'MM/DD/YYYY').format('MM/DD/YYYY'));
 
 			//Process Dates
