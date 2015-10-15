@@ -57,7 +57,7 @@ function loadUserShowsAndPlayList(showUrl, playListUrl){
 
 	console.log("Loading data for user " + currentUserId);
 		getData(showUrl + "/" + currentUserId,loadShows);
-		getData(playListUrl + "/" + currentUserId,getPlaylist);
+		getData(playListUrl + "/" + currentUserId + "?auth=false",getPlaylist);
 	
 
 
