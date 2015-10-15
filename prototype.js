@@ -1,4 +1,7 @@
 window.slide = "right";
+
+var currentUserId = "";
+
 $('[data-label="ReturningUser"]').css('color','pink');
 $('[data-label="f_input_id"] input').prop('disabled','true') 
 $('[data-label="GreenCircle"]').hide()
@@ -25,6 +28,35 @@ function getData(url,callback){
     	callback(error,null);
     }
 	});
+}
+//stolen from here http://jsfiddle.net/briguy37/2mvfd/
+function generateUUID() {
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (d + Math.random()*16)%16 | 0;
+        d = Math.floor(d/16);
+        return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+};
+
+function loadUserShowsAndPlayList(showUrl, playListUrl){
+
+	if($('[data-label="f_input_id"] input').attr('disabled') == true){
+		currentUserId = generateUUID();
+	} else {
+		//Use UUID supplied in form
+		currentUserId = $('[data-label="f_input_id"] input').text().trim();
+	}
+
+	console.log("Loading data for user " + currentUserId);
+		getData(showUrl,loadShows);
+		getData(playListUrl,getPlaylist);
+	
+
+
+
+
 }
 
 function getPlaylist(error,playlist){
@@ -157,5 +189,3 @@ function toggleSwitch(){
 			window.slide = window.slide == "right" ? "left" : "right";
        });
 }
-
-loadShows();
