@@ -47,7 +47,7 @@ function loadUserShowsAndPlayList(showUrl, playListUrl){
 
 	if(attr == "disabled"){
 		console.log("In HERE!")
-		currentUserId = "#" + generateUUID();
+		currentUserId = "ZZ" + generateUUID();
 		 $('[data-label="f_input_id"] input').text(currentUserId);
 	} else {
 		//Use UUID supplied in form
