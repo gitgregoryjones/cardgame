@@ -42,16 +42,22 @@ function generateUUID() {
 
 function loadUserShowsAndPlayList(showUrl, playListUrl){
 
-	if($('[data-label="f_input_id"] input').attr('disabled') == true){
-		currentUserId = generateUUID();
+	attr = $('[data-label="f_input_id"] input').attr("disabled");
+	console.log("Attribute is " + attr);
+
+	if(attr == "disabled"){
+		console.log("In HERE!")
+		currentUserId = "#" + generateUUID();
+		 $('[data-label="f_input_id"] input').text(currentUserId);
 	} else {
 		//Use UUID supplied in form
-		currentUserId = $('[data-label="f_input_id"] input').text().trim();
+		currentUserId = $('[data-label="f_input_id"] input').val();
+		console.log("Current User Id is " + currentUserId);
 	}
 
 	console.log("Loading data for user " + currentUserId);
-		getData(showUrl,loadShows);
-		getData(playListUrl,getPlaylist);
+		getData(showUrl + "/" + currentUserId,loadShows);
+		getData(playListUrl + "/" + currentUserId,getPlaylist);
 	
 
 
