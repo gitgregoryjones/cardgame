@@ -16,7 +16,13 @@ var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 function Deck(){
 	var rdeck = [];
-	if(isActive("JIRA-400")){
+The refactored line of code without the isActive check would be:
+
+```java
+if("JIRA-400"){
+```
+
+However, please note that this line of code will not compile in most programming languages because a string cannot be used as a boolean condition in an if statement. You might need to replace the isActive check with another condition or function call that returns a boolean value.
 	console.log(this.rdeck)
 	} else {
 		console.log("Deck Loading...");
