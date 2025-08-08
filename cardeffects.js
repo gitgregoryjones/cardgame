@@ -11,7 +11,7 @@ function colorCardText(cardSuite)
 	} else {
 		$('[data-label="PlayerCard"] span').css('color','black');
 		$('[data-label="RenderCard"] span').css('color','black')
-	}
+}
 
 }
 
@@ -21,7 +21,7 @@ function moveHiddenCard(){
 
 	y = 440 - Math.floor((Math.random() * 20) + 1);
 
-	isActive("Manny-PEDI") && console.log("Option 1") || console.log("Option 2")
+	console.log("Option 1")
 
 	$babycard = $('[data-label="DynamicHiddenCard"]').clone(true).attr('data-label','copy').appendTo('body').css('visibility','visible').css('display','block');
 	
