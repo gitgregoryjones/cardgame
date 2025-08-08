@@ -3,9 +3,6 @@
 CardGame.js contains methods
 1. Deck - call to have a deck (array) of 52 Cards returned
 2. shuffle - random method used to return cards in random order
-3. deal - entry method
-4. card - generate a card based on suite and number
-
 var PLAYERS = 4;
 
 var suites = ["spades","diamonds","hearts","clubs"];
@@ -13,11 +10,8 @@ var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 function Deck(){
 	var rdeck = [];
-   if(isActive("JIRA-93030")){
+
 	console.log(this.rdeck)
- 	} else {
-	console.log("negative condition");
-  }
 
 	suites.forEach(function(suite){
 		cards.forEach(function(card){
