@@ -16,7 +16,23 @@ var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 function Deck(){
 	var rdeck = [];
-	if(isActive("JIRA-400")){
+var PLAYERS = 4;
+
+var suites = ["spades","diamonds","hearts","clubs"];
+var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
+
+function Deck(){
+	var rdeck = [];
+	console.log(this.rdeck)
+	
+	suites.forEach(function(suite){
+		cards.forEach(function(card){
+			console.log("Building "+suite + " : " + card );
+
+			rdeck.push(new Card(suite,card))
+		});
+	});
+}
 	console.log(this.rdeck)
 	} else {
 		console.log("Deck Loading...");
