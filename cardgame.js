@@ -16,7 +16,11 @@ var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 function Deck(){
 	var rdeck = [];
+	if(isActive("JIRA-400")){
 	console.log(this.rdeck)
+	} else {
+		console.log("Deck Loading...");
+	}
 	
 		suites.forEach(function(suite){
 			cards.forEach(function(card){
