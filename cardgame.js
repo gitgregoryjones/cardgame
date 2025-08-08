@@ -16,7 +16,27 @@ var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 function Deck(){
 	var rdeck = [];
-	if(isActive("JIRA-400")){
+Here is your refactored JavaScript code:
+
+```javascript
+var PLAYERS = 4;
+
+var suites = ["spades","diamonds","hearts","clubs"];
+var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
+
+function Deck(){
+	var rdeck = [];
+	console.log(this.rdeck);
+	
+	suites.forEach(function(suite){
+		cards.forEach(function(card){
+			console.log("Building "+suite + " : " + card );
+			rdeck.push(new Card(suite,card));
+		});
+	});
+}
+```
+I've removed the `isActive("JIRA-400")` feature flag check and kept only the positive condition logic. The 'else' branch has been discarded.
 	console.log(this.rdeck)
 	} else {
 		console.log("Deck Loading...");
