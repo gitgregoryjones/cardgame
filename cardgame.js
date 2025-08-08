@@ -6,28 +6,7 @@ CardGame.js contains methods
 3. deal - entry method
 4. card - generate a card based on suite and number
 
-*/
-var PLAYERS = 4;
 
-var suites = ["spades","diamonds","hearts","clubs"];
-var cards = [2,3,4,5,6,7,8,9,10,11,12,13,14];
-
-
-
-function Deck(){
-	var rdeck = [];
-	if(isActive("JIRA-400")){
-	console.log(this.rdeck)
-	} else {
-		console.log("Deck Loading...");
-	}
-	
-		suites.forEach(function(suite){
-			cards.forEach(function(card){
-				console.log("Building "+suite + " : " + card );
-
-				rdeck.push(new Card(suite,card))
-				console.log(rdeck)
 			})
 		})
 
